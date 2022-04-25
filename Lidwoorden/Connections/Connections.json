@@ -1,0 +1,158 @@
+{
+  "07950eb7-bc24-451d-80ca-37ba057c9720": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_teams/connections/shared-teams-f86cf3ca-8227-45fb-b3da-cfb617b4fa61",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1568/1.0.1568.2756/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "db8abeb1-a0be-42be-a627-e5f272fac89c"
+    ],
+    "id": "07950eb7-bc24-451d-80ca-37ba057c9720"
+  },
+  "2412fa8a-62fc-4d29-bf19-9c5fce13dff8": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365users/connections/4a7a353412ec4003ae618b43f87e7f35",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "2412fa8a-62fc-4d29-bf19-9c5fce13dff8"
+  },
+  "45037c29-7c21-47ea-b24b-d958d7c019d9": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins/connections/8c6738c4de944a00b61526f5f172be39",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Power Automate for Admins",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1551/1.0.1551.2693/microsoftflowforadmins/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAutomateforAdmins"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "45037c29-7c21-47ea-b24b-d958d7c019d9"
+  },
+  "5a29f62a-d8d4-4476-b475-911dd39f67c5": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365/connections/8e9203027e4f4993bae4683b3bc1b1d5",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1570/1.0.1570.2764/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5a29f62a-d8d4-4476-b475-911dd39f67c5"
+  },
+  "db8abeb1-a0be-42be-a627-e5f272fac89c": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/9c1f7d2d5f9c4b48b49af0bf4f932424-43bcd45700c91396",
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-157.westeurope.logic.azure.com:443/workflows/c66e4fe78dcc4198aff18c32198708f6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j4Jmj7qySqgB4NKGd5M8-2QFhVIymRc3l-2rNc8xQbE",
+      "workflowEndpoint": "/subscriptions/775928be-834e-40da-bde6-b48f96905a08/resourceGroups/d383ddadd60e48d1a50bcd16be897109-ac5bc1911fbb4c70b8c203a14638298d/providers/Microsoft.Logic/workflows/9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424",
+      "workflowName": "9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424",
+      "workflowPath": "/subscriptions/775928be-834e-40da-bde6-b48f96905a08/resourceGroups/d383ddadd60e48d1a50bcd16be897109-ac5bc1911fbb4c70b8c203a14638298d/providers/Microsoft.Logic/workflows/9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "07950eb7-bc24-451d-80ca-37ba057c9720": {
+          "value": "shared_teams"
+        },
+        "f13792b9-d4a0-4866-a39b-88a09ea0b279": {
+          "value": "shared_rss"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_rss": {
+          "value": "f13792b9-d4a0-4866-a39b-88a09ea0b279"
+        },
+        "shared_teams": {
+          "value": "07950eb7-bc24-451d-80ca-37ba057c9720"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerApp->Whenafeeditemispublished,Applytoeach,Postadapti..."
+    ],
+    "dependencies": {
+      "shared_rss": "f13792b9-d4a0-4866-a39b-88a09ea0b279",
+      "shared_teams": "07950eb7-bc24-451d-80ca-37ba057c9720"
+    },
+    "dependents": [],
+    "id": "db8abeb1-a0be-42be-a627-e5f272fac89c"
+  },
+  "f13792b9-d4a0-4866-a39b-88a09ea0b279": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_rss/connections/56ab5671bc554bd8ad073b7cd47d6e65",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "RSS",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1567/1.0.1567.2748/rss/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_rss",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "RSS"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "db8abeb1-a0be-42be-a627-e5f272fac89c"
+    ],
+    "id": "f13792b9-d4a0-4866-a39b-88a09ea0b279"
+  }
+}

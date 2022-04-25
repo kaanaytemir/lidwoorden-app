@@ -1,0 +1,95 @@
+Search As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: |-
+        =ClearCollect(SeedCollection, SortByColumns(RSS.ListFeedItems("https://het-of-de.nl/feed?2"), "title", Ascending))
+
+    "Gallery1_2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(109, 49, 162, 1)
+        Fill: =RGBA(204, 208, 225, 1)
+        Height: =893
+        Items: =Search(SeedCollection, TextInput3.Text, "title")
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        TemplatePadding: =0
+        TemplateSize: =Min(96, Self.Height - 60)
+        Y: =243
+        ZIndex: =1
+
+        Title5 As label:
+            Color: =RGBA(109, 49, 162, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        NextArrow5 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(109, 49, 162, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =568
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Separator5 As rectangle:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+    TextInput3 As text:
+        BorderColor: =RGBA(109, 49, 162, 1)
+        BorderThickness: =4
+        Clear: =true
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HintText: ="Zoeken"
+        OnSelect: =Filter(SeedCollection,TextInput3.Text = title)
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =21
+        Width: =460
+        X: =90
+        Y: =142
+        ZIndex: =3
+
+    Label1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =30
+        Text: ="Lidwoorden (de of het?)"
+        Width: =488
+        X: =105
+        Y: =47
+        ZIndex: =4
+
+    Icon1_1 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Home)
+        X: =41
+        Y: =50
+        ZIndex: =5
+

@@ -1,0 +1,6 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =RSS.ListFeedItems("https://het-of-de.nl/feed?2")
+    StartScreen: =
+

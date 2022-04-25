@@ -1,0 +1,95 @@
+Details As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: =
+
+    Label3_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =123
+        Size: =34
+        Text: ="De of het"
+        Width: =219
+        X: =228
+        Y: =21
+        ZIndex: =2
+
+    Label3_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(109, 49, 162, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =28
+        Text: =Title
+        Width: =269
+        X: =203
+        Y: =114
+        ZIndex: =3
+
+    Container3 As groupContainer:
+        BorderColor: =RGBA(141, 198, 63, 1)
+        BorderStyle: =BorderStyle.Dashed
+        BorderThickness: =10
+        Height: =207
+        Width: =337
+        X: =156
+        Y: =389
+        ZIndex: =7
+
+        Label3 As label:
+            Align: =Align.Center
+            Color: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =61
+            Size: =28
+            Text: =Replace(Summary, 1, 30, "" )
+            Width: =88
+            X: =129
+            Y: =48
+            ZIndex: =1
+
+        Label3_3 As label:
+            Align: =Align.Center
+            Color: =RGBA(109, 49, 162, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =24
+            Text: =Title
+            Width: =269
+            X: =39
+            Y: =93
+            ZIndex: =2
+
+    HtmlText2 As htmlViewer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =124
+        HtmlText: |
+            =If(Replace(Summary, 1, 30, "" ) = "De", "<b>De</b> is correct, en dus is het ook <font color=green><b>die</b></font> en <font color=green><b>deze</b></font>", If(Replace(Summary, 1, 30, "" ) = "Het", "<b>Het</b> is correct, en dus is het ook <font color=green><b>dit</b></font> en <font color=green><b>dat</b></font>"))
+        PaddingRight: =20
+        Size: =20
+        Width: =273
+        X: =188
+        Y: =855
+        ZIndex: =8
+
+    Icon1 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Search)
+        X: =41
+        Y: =50
+        ZIndex: =9
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =8
+        Width: =526
+        X: =75
+        Y: =243
+        ZIndex: =10
+
+    Rectangle1_1 As rectangle:
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =8
+        Width: =526
+        X: =75
+        Y: =750
+        ZIndex: =11
+

@@ -1,0 +1,173 @@
+Home As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: |-
+        =ClearCollect(SeedCollection, SortByColumns(RSS.ListFeedItems("https://het-of-de.nl/feed?2"), "title", Ascending))
+
+    Label1_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =34
+        Text: ="Lidwoorden (de of het?)"
+        Width: =550
+        X: =45
+        Y: =36
+        ZIndex: =4
+
+    Image2 As image:
+        Height: =96
+        Image: ='Pencil.svg'
+        Width: =148
+        X: =37
+        Y: =437
+        ZIndex: =5
+
+    Image2_1 As image:
+        Height: =138
+        Image: ='640px-Pluma_vector'
+        Width: =201
+        X: =439
+        Y: =397
+        ZIndex: =6
+
+    Image2_2 As image:
+        Height: =134
+        Image: ='Basic_Notebook.svg'
+        Width: =222
+        Y: =650
+        ZIndex: =7
+
+    Image2_3 As image:
+        Height: =136
+        Image: =School
+        Width: =184
+        X: =16
+        Y: =186
+        ZIndex: =8
+
+    HtmlText1 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>De</b> <font color=purple>potlood</font>"
+        Width: =231
+        X: =28
+        Y: =553
+        ZIndex: =10
+
+    HtmlText1_1 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>De</b> <font color=purple>pen</font>"
+        Width: =132
+        X: =468
+        Y: =554
+        ZIndex: =11
+
+    HtmlText1_2 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>Het</b> <font color=purple>schrift</font>"
+        Width: =231
+        X: =28
+        Y: =808
+        ZIndex: =12
+
+    HtmlText1_3 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>De</b> <font color=purple>school</font>"
+        Width: =231
+        X: =28
+        Y: =327
+        ZIndex: =13
+
+    Image2_4 As image:
+        Height: =136
+        Image: =Boek
+        Width: =184
+        X: =236
+        Y: =186
+        ZIndex: =14
+
+    HtmlText1_4 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>Het</b> <font color=purple>boek</font>"
+        Size: =24
+        Width: =161
+        X: =259
+        Y: =327
+        ZIndex: =15
+
+    Image2_5 As image:
+        Height: =136
+        Image: =Agenda
+        Width: =184
+        X: =442
+        Y: =186
+        ZIndex: =16
+
+    HtmlText1_5 As htmlViewer:
+        Height: =117
+        HtmlText: ="<b>De</b> <font color=purple>agenda</font>"
+        Size: =24
+        Width: =173
+        X: =453
+        Y: =327
+        ZIndex: =17
+
+    Image2_6 As image:
+        Height: =136
+        Image: =Student
+        Width: =184
+        X: =434
+        Y: =648
+        ZIndex: =18
+
+    HtmlText1_6 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>De</b> <font color=purple>student</font>"
+        Size: =24
+        Width: =187
+        X: =453
+        Y: =808
+        ZIndex: =19
+
+    Image2_7 As image:
+        Height: =136
+        Image: ='Icons8_flat_diploma_2.svg'
+        Width: =184
+        X: =236
+        Y: =417
+        ZIndex: =20
+
+    HtmlText1_7 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>Het</b> <font color=purple>diploma</font>"
+        Width: =231
+        X: =237
+        Y: =554
+        ZIndex: =21
+
+    Image2_8 As image:
+        Height: =136
+        Image: =Prüfung
+        Width: =184
+        X: =245
+        Y: =647
+        ZIndex: =22
+
+    HtmlText1_8 As htmlViewer:
+        Height: =70
+        HtmlText: ="<b>Het</b> <font color=purple>examen</font>"
+        Size: =24
+        Width: =258
+        X: =236
+        Y: =808
+        ZIndex: =23
+
+    Button1 As button:
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =70
+        OnSelect: =Navigate(Search)
+        Size: =24
+        Text: ="Zoek lidwoord"
+        Width: =280
+        X: =197
+        Y: =959
+        ZIndex: =24
+
